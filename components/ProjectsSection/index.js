@@ -35,10 +35,11 @@ const ProjectsSectionComponent = () => {
             top={project.artImg.top}
             right={project.artImg?.right}
             left={project.artImg?.left}
+            isRotate={project.artImg?.isRotate}
             style={{
-              transform:
-                project.artImg?.isTransform &&
-                `translate(${scrollY - vh}px, -${scrollY - vh}px)`,
+              transform: project.artImg.isRotate
+                ? `rotate(${scrollY * 0.04}deg)`
+                : `translate(${scrollY - vh}px, -${scrollY - vh}px)`,
             }}
           >
             <Image

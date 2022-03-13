@@ -21,7 +21,6 @@ export default [
       height: "105px",
       top: "-12vh",
       left: "-35vw",
-      isTransform: true,
     },
     projImg: {
       src: EbisuImg,
@@ -43,6 +42,7 @@ export default [
       height: "181.1px",
       top: "-10vh",
       left: "50vw",
+      isRotate: true,
     },
     projImg: {
       src: ChatappImg,
@@ -64,6 +64,7 @@ export default [
       height: "144.15px",
       top: "-8vh",
       left: "-45vw",
+      isRotate: true,
     },
     projImg: {
       src: MmaImg,
