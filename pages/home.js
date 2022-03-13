@@ -1,16 +1,17 @@
 import React from "react";
+
+import { ScrollProvider } from "../helpers/ScrollProvider";
+
 import ContactSectionComponent from "../components/ContactSection";
 import HeroSectionComponent from "../components/HeroSection";
 import ProjectsSectionComponent from "../components/ProjectsSection";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div>
+    <ScrollProvider>
       <HeroSectionComponent />
       <ProjectsSectionComponent />
       <ContactSectionComponent />
-    </div>
+    </ScrollProvider>
   );
-};
-
-export default Home;
+}
