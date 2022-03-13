@@ -1,0 +1,34 @@
+{
+    "name": "lorraine-andrea-next-app",
+    "version": "0.1.0",
+    "author": "Hiroshi Acocoro",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "next": "12.1.0",
+        "react": "^17.0.2",
+        "react-div-100vh": "^0.7.0",
+        "react-dom": "^17.0.2",
+        "react-parallax-mouse": "^1.5.1",
+        "styled-components": "^5.3.3"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.38",
+        "babel-plugin-styled-components": "^2.0.6",
+        "eslint": "^7.31.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-next": "12.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^1.7.0",
+        "prettier": "^2.3.2"
+    }
+}
