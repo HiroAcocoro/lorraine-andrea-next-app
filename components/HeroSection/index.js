@@ -68,7 +68,7 @@ const HeroSectionComponent = () => {
         </MouseParallaxChild>
         <HeroSectionBackground scrollY={scrollY}>
           <HeroSectionBackgroundImgContainer
-            top="30%"
+            top="20%"
             left="30vw"
             height="52px"
             width="52px"

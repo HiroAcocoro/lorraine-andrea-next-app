@@ -28,6 +28,7 @@ export const ProjectsSectionImgWrapper = styled.div`
   top: ${({ top }) => top};
   left: ${({ left }) => left};
   right: ${({ right }) => right};
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 `;
 
 export const ProjectsSectionRow = styled.div`

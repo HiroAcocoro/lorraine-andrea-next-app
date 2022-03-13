@@ -61,36 +61,6 @@ const ProjectsSectionComponent = () => {
           </ProjectsSectionProjImg>
         </ProjectsSectionRow>
       ))}
-      {/* <ProjectsSectionRow isReverse>
-        <ProjectsSectionImgWrapper
-          height="233px"
-          width="233px"
-          right="-15%"
-          top="-5vw"
-        >
-          <Image alt="" src={ProjectsImg2} layout="responsive" />
-        </ProjectsSectionImgWrapper>
-        <ProjectsSectionProjImg width="250px" height="170px" margin="0 0 0 10%">
-          <Image alt="chatapp-img" src={ChatappImg} layout="responsive" />
-        </ProjectsSectionProjImg>
-      </ProjectsSectionRow>
-      <ProjectsSectionRow>
-        <ProjectsSectionImgWrapper
-          height="233px"
-          width="233px"
-          left="-15%"
-          top="1vw"
-        >
-          <Image alt="" src={ProjectsImg3} layout="responsive" />
-        </ProjectsSectionImgWrapper>
-        <ProjectsSectionProjImg
-          width="250px"
-          height="170px"
-          margin="0 15px 0 0"
-        >
-          <Image alt="chatapp-img" src={MmaImg} layout="responsive" />
-        </ProjectsSectionProjImg>
-      </ProjectsSectionRow> */}
     </ProjectsSectionMainContainer>
   );
 };

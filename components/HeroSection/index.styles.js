@@ -32,7 +32,7 @@ export const HeroSectionContent = styled.div`
   animation: fadeIn 3s;
   margin-left: 2rem;
   transform: ${({ scrollY }) =>
-    scrollY > 10 && `translate(-20%,-1.25em) scale(0.7)`};
+    scrollY > 10 && `translate(-10%,-1.25em) scale(0.7)`};
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   @keyframes fadeIn {
