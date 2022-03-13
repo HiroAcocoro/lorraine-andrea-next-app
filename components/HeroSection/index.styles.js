@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+import Breakpoints from "../../constants/Breakpoints";
+
+const { lg } = Breakpoints;
+
 export const HeroSectionMainContainer = styled.div`
   height: 110vh;
 `;
@@ -21,6 +25,14 @@ export const HeroSectionBackgroundImgContainer = styled.div`
   left: ${({ left }) => left};
   height: ${({ height }) => height};
   width: ${({ width }) => width};
+
+  @media screen and (min-width: ${lg}) {
+    top: ${({ top }) => top};
+    left: ${({ left }) => left};
+    height: ${({ height }) => `calc(${height} * 3)`};
+    width: ${({ width }) => `calc(${width} * 3)`};
+    ${({ lgMod }) => lgMod};
+  }
 `;
 
 export const HeroSectionContent = styled.div`
@@ -33,7 +45,13 @@ export const HeroSectionContent = styled.div`
   margin-left: 2rem;
   transform: ${({ scrollY }) =>
     scrollY > 10 && `translate(-10%,-1.25em) scale(0.7)`};
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  @media screen and (min-width: ${lg}) {
+    margin-left: ${({ scrollY }) => scrollY < 10 && `35vw`};
+    transform: ${({ scrollY }) =>
+      scrollY > 10 && `translate(0,-0.25em) scale(0.8)`};
+  }
 
   @keyframes fadeIn {
     0% {
@@ -87,6 +105,11 @@ export const HeroSectionIntro = styled.div`
   line-height: 72px;
   letter-spacing: 1px;
   color: #ffffff;
+
+  @media screen and (min-width: ${lg}) {
+    font-size: 98px;
+    line-height: 88px;
+  }
 `;
 
 export const HeroSectionName = styled.div`
@@ -94,6 +117,11 @@ export const HeroSectionName = styled.div`
   font-weight: 800;
   letter-spacing: 1px;
   color: #ffffff;
+
+  @media screen and (min-width: ${lg}) {
+    font-size: 78px;
+    line-height: 88px;
+  }
 `;
 
 export const HeroSectionDescription = styled.div`
@@ -102,10 +130,18 @@ export const HeroSectionDescription = styled.div`
   line-height: 72px;
   letter-spacing: 1px;
   color: #ff8f8f;
+
+  @media screen and (min-width: ${lg}) {
+    font-size: 63px;
+    line-height: 88px;
+  }
 `;
 
 export const HeroLinkContainer = styled.div`
   margin-left: 2rem;
+  opacity: ${({ scrollY }) => (scrollY > 10 ? `1` : `0`)};
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
   a {
     width: 145px;
     height: 45px;
@@ -121,6 +157,15 @@ export const HeroLinkContainer = styled.div`
     font-weight: 600;
     line-height: 24px;
   }
+
+  @media screen and (min-width: ${lg}) {
+    margin: 2em 0 0 10em;
+    a {
+      width: 205px;
+      height: 55px;
+      font-size: 1.4rem;
+    }
+  }
 `;
 
 export const HeroLinkImgContainer = styled.div`
@@ -128,4 +173,9 @@ export const HeroLinkImgContainer = styled.div`
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
+
+  @media screen and (min-width: ${lg}) {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
 `;

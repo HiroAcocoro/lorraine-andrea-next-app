@@ -48,8 +48,8 @@ const HeroSectionComponent = () => {
           <HeroSectionContent scrollY={scrollY}>
             <HeroSectionIntro>Hello, I&apos;m</HeroSectionIntro>
             <HeroSectionName>Lorraine Andrea</HeroSectionName>
-            <HeroSectionDescription>UX/UI Designer</HeroSectionDescription>
-            <HeroLinkContainer>
+            <HeroSectionDescription>UI/UX Designer</HeroSectionDescription>
+            <HeroLinkContainer scrollY={scrollY}>
               <Link href="/">
                 <a>
                   <HeroLinkImgContainer>
@@ -72,6 +72,7 @@ const HeroSectionComponent = () => {
             left="30vw"
             height="52px"
             width="52px"
+            lgMod="top: 15%"
           >
             <Image alt="" src={PurpleDonut1} layout="responsive" />
           </HeroSectionBackgroundImgContainer>
@@ -80,6 +81,7 @@ const HeroSectionComponent = () => {
             left="-18vw"
             height="163px"
             width="163px"
+            lgMod="left: -12vw"
           >
             <Image alt="" src={OrangeSpring1} layout="responsive" />
           </HeroSectionBackgroundImgContainer>
@@ -88,6 +90,7 @@ const HeroSectionComponent = () => {
             left="50vw"
             height="246.25px"
             width="198.25px"
+            lgMod="top: 20%"
           >
             <Image alt="" src={HeroImg1} layout="responsive" />
           </HeroSectionBackgroundImgContainer>
