@@ -1,4 +1,4 @@
 export default {
-  md: "1023",
-  sm: "767px",
+  lg: "1024px",
+  md: "767px",
 };
