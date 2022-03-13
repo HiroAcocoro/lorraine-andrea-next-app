@@ -58,7 +58,7 @@ const ContactSectionComponent = () => {
               <ContactSectionImgWrapper
                 width={contact.width}
                 height={contact.height}
-                key={contact.key}
+                key={contact.id}
               >
                 <Image
                   src={contact.src}
