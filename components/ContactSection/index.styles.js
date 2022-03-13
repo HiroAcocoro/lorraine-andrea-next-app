@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
+import Breakpoints from "../../constants/Breakpoints";
+
+const { lg } = Breakpoints;
+
 export const ContactSectionMainContainer = styled.div``;
 
-export const ContactSectionTopDiv = styled.div``;
+export const ContactSectionTopDiv = styled.div`
+  @media screen and (min-width: ${lg}) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+`;
 
 export const ContactSectionTitle = styled.div`
   display: flex;
@@ -14,16 +23,19 @@ export const ContactSectionTitle = styled.div`
   text-align: center;
   letter-spacing: 1px;
   color: #ffffff;
+
+  @media screen and (min-width: ${lg}) {
+    font-size: 84px;
+    line-height: 76px;
+    height: 15vh;
+    width: 60vw;
+    margin-right: 5vw;
+    ${({ lgMod }) => lgMod};
+  }
 `;
 
 export const ContactSectionTitleAlt = styled.div`
   color: #ff8f8f;
-`;
-
-export const ContactSectionBottomDiv = styled.div`
-  display: flex;
-  flex-directions: column;
-  align-items: center;
 `;
 
 export const ContactSectionImgWrapper = styled.div`
@@ -31,7 +43,16 @@ export const ContactSectionImgWrapper = styled.div`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   top: ${({ top }) => top};
-  right: ${({ right }) => right};
+  left: ${({ left }) => left};
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  @media screen and (min-width: ${lg}) {
+    width: ${({ width }) => `calc(${width} * 1.5)`};
+    height: ${({ height }) => `calc(${height} * 1.5)`};
+    top: ${({ top }) => top};
+    left: ${({ left }) => left};
+    ${({ lgMod }) => lgMod};
+  }
 `;
 
 export const CoontactSectionFooter = styled.div``;
@@ -47,4 +68,7 @@ export const ContactImgs = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  @media screen and (min-width: ${lg}) {
+    bottom: 30vh;
+  }
 `;

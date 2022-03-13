@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { use100vh } from "react-div-100vh";
 import Image from "next/image";
+
+import { ScrollContext } from "../../helpers/ScrollProvider";
 
 import ContactImg1 from "../../public/contact-img-1.png";
 import ContactImg2 from "../../public/contact-img-2.png";
@@ -10,7 +13,6 @@ import Contacts from "../../constants/Contacts";
 import {
   ContactFooterImgs,
   ContactImgs,
-  ContactSectionBottomDiv,
   ContactSectionImgWrapper,
   ContactSectionMainContainer,
   ContactSectionTitle,
@@ -20,36 +22,50 @@ import {
 } from "./index.styles";
 
 const ContactSectionComponent = () => {
+  const { scrollY } = useContext(ScrollContext);
+  const vh = use100vh();
+
   return (
     <ContactSectionMainContainer>
       <ContactSectionTopDiv>
         <ContactSectionTitle>
-          Let&apos;s&nbsp;
+          Let&apos;s
           <ContactSectionTitleAlt>&nbsp;make</ContactSectionTitleAlt>
           &nbsp;something
           <ContactSectionTitleAlt>&nbsp;fun</ContactSectionTitleAlt>
           &nbsp;together!
         </ContactSectionTitle>
-      </ContactSectionTopDiv>
-      <ContactSectionBottomDiv>
-        <ContactSectionImgWrapper width="356px" height="356px">
+        <ContactSectionImgWrapper
+          width="356px"
+          height="356px"
+          style={{
+            transform: `translate(${scrollY - vh * 5.25}px, -${
+              scrollY - vh * 5.25
+            }px)`,
+          }}
+        >
           <Image src={ContactImg1} alt="" layout="responsive" />
         </ContactSectionImgWrapper>
         <ContactSectionImgWrapper
           width="94px"
           height="94px"
-          top="-15vh"
-          right="10vw"
+          top="-45vh"
+          left="75vw"
+          lgMod="left: 70vw; top: 20vh;"
         >
           <Image src={ContactImg2} alt="" layout="responsive" />
         </ContactSectionImgWrapper>
-      </ContactSectionBottomDiv>
+      </ContactSectionTopDiv>
       <CoontactSectionFooter>
-        <ContactSectionTitle>
+        <ContactSectionTitle lgMod="margin: 5vh 0 0 0; width: 100%;">
           Hit me
           <ContactSectionTitleAlt>&nbsp;up</ContactSectionTitleAlt>
         </ContactSectionTitle>
-        <ContactSectionImgWrapper width="100px" height="100px">
+        <ContactSectionImgWrapper
+          width="100px"
+          height="100px"
+          lgMod="width: 480px; height: 480px"
+        >
           <Image src={ContactImg3} alt="" layout="responsive" />
         </ContactSectionImgWrapper>
         <ContactFooterImgs>
@@ -58,6 +74,7 @@ const ContactSectionComponent = () => {
               <ContactSectionImgWrapper
                 width={contact.width}
                 height={contact.height}
+                lgMod="height: 100px; width: 100px;"
                 key={contact.id}
               >
                 <Image
