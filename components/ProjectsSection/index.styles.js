@@ -37,10 +37,6 @@ export const ProjectsSectionImgWrapper = styled.div`
   top: ${({ top }) => top};
   left: ${({ left }) => left};
   right: ${({ right }) => right};
-  transition: ${({ isRotate }) =>
-    isRotate
-      ? `all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)`
-      : `all 2s cubic-bezier(0.645, 0.045, 0.355, 1)`};
 
   @media screen and (min-width: ${lg}) {
     width: ${({ width }) => `calc(${width} * 3)`};
@@ -67,6 +63,11 @@ export const ProjectsSectionProjImg = styled.div`
   @media screen and (min-width: ${lg}) {
     width: ${({ width }) => `calc(${width} * 3)`};
     height: ${({ height }) => `calc(${height} * 3)`};
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      width: ${({ width }) => `calc(${width} * 2.5)`};
+      height: ${({ height }) => `calc(${height} * 2.5)`};
+    }
   }
 
   span {
