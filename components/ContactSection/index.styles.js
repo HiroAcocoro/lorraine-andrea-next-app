@@ -44,7 +44,6 @@ export const ContactSectionImgWrapper = styled.div`
   height: ${({ height }) => height};
   top: ${({ top }) => top};
   left: ${({ left }) => left};
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   @media screen and (min-width: ${lg}) {
     width: ${({ width }) => `calc(${width} * 1.5)`};
@@ -52,6 +51,10 @@ export const ContactSectionImgWrapper = styled.div`
     top: ${({ top }) => top};
     left: ${({ left }) => left};
     ${({ lgMod }) => lgMod};
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      ${({ scale125Mod }) => scale125Mod};
+    }
   }
 `;
 

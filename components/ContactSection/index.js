@@ -39,8 +39,8 @@ const ContactSectionComponent = () => {
           width="356px"
           height="356px"
           style={{
-            transform: `translate(${scrollY - vh * 5.25}px, -${
-              scrollY - vh * 5.25
+            transform: `translate(${scrollY - vh * 5.4}px, -${
+              scrollY - vh * 5.4
             }px)`,
           }}
         >
@@ -52,6 +52,7 @@ const ContactSectionComponent = () => {
           top="-45vh"
           left="75vw"
           lgMod="left: 70vw; top: 20vh;"
+          scale125Mod="left: 60vw; top: 40vh;"
         >
           <Image src={ContactImg2} alt="" layout="responsive" />
         </ContactSectionImgWrapper>
@@ -65,6 +66,7 @@ const ContactSectionComponent = () => {
           width="100px"
           height="100px"
           lgMod="width: 480px; height: 480px"
+          scale125Mod="width: 380px; height: 380px"
         >
           <Image src={ContactImg3} alt="" layout="responsive" />
         </ContactSectionImgWrapper>
@@ -75,6 +77,7 @@ const ContactSectionComponent = () => {
                 width={contact.width}
                 height={contact.height}
                 lgMod="height: 100px; width: 100px;"
+                scale125Mod="width: 70px; height: 70px"
                 key={contact.id}
               >
                 <Image
