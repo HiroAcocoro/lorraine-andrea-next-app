@@ -14,7 +14,10 @@ export default function Home() {
       <Head>
         <title>Lorraine Andrea</title>
         <meta name="description" content="Lorraine Andrea Portfolio" />
-        <link rel="icon" href="../public/lorraine-andrea-logo.png" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/ebisu/image/upload/v1647237797/lorraine-andrea-logo_pkzfko.png"
+        />
       </Head>
       <ScrollProvider>
         <HeroSectionComponent />
