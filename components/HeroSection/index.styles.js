@@ -32,6 +32,12 @@ export const HeroSectionBackgroundImgContainer = styled.div`
     height: ${({ height }) => `calc(${height} * 3)`};
     width: ${({ width }) => `calc(${width} * 3)`};
     ${({ lgMod }) => lgMod};
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      height: ${({ height }) => `calc(${height} * 2.5)`};
+      width: ${({ width }) => `calc(${width} * 2.5)`};
+      ${({ scale125Mod }) => scale125Mod};
+    }
   }
 `;
 
@@ -109,6 +115,11 @@ export const HeroSectionIntro = styled.div`
   @media screen and (min-width: ${lg}) {
     font-size: 98px;
     line-height: 88px;
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      font-size: 78px;
+      line-height: 68px;
+    }
   }
 `;
 
@@ -121,6 +132,11 @@ export const HeroSectionName = styled.div`
   @media screen and (min-width: ${lg}) {
     font-size: 78px;
     line-height: 88px;
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      font-size: 58px;
+      line-height: 53px;
+    }
   }
 `;
 
@@ -134,6 +150,11 @@ export const HeroSectionDescription = styled.div`
   @media screen and (min-width: ${lg}) {
     font-size: 63px;
     line-height: 88px;
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      font-size: 53px;
+      line-height: 68px;
+    }
   }
 `;
 
@@ -164,6 +185,10 @@ export const HeroLinkContainer = styled.div`
       width: 205px;
       height: 55px;
       font-size: 1.4rem;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+      margin: 2em 0 0 6em;
     }
   }
 `;

@@ -73,6 +73,7 @@ const HeroSectionComponent = () => {
             height="52px"
             width="52px"
             lgMod="top: 15%"
+            scale125Mod="top: 13%"
           >
             <Image alt="" src={PurpleDonut1} layout="responsive" />
           </HeroSectionBackgroundImgContainer>
