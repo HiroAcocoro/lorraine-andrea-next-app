@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Lorraine Andrea</title>
         <meta name="description" content="Lorraine Andrea Portfolio" />
-        <link rel="icon" href="/lorraine-andrea-logo.png" />
+        <link rel="icon" href="../public/lorraine-andrea-logo.png" />
       </Head>
       <ScrollProvider>
         <HeroSectionComponent />
