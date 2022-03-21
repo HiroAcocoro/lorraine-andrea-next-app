@@ -48,18 +48,20 @@ const ProjectsSectionComponent = () => {
               layout="responsive"
             />
           </ProjectsSectionImgWrapper>
-          <ProjectsSectionProjImg
-            width={project.projImg.width}
-            height={project.projImg.height}
-            left={project.projImg.left}
-            right={project.projImg.right}
-          >
-            <Image
-              alt={project.projImg.alt}
-              src={project.projImg.src}
-              layout="responsive"
-            />
-          </ProjectsSectionProjImg>
+          <a target="_blank" href={project.link} rel="noreferrer">
+            <ProjectsSectionProjImg
+              width={project.projImg.width}
+              height={project.projImg.height}
+              left={project.projImg.left}
+              right={project.projImg.right}
+            >
+              <Image
+                alt={project.projImg.alt}
+                src={project.projImg.src}
+                layout="responsive"
+              />
+            </ProjectsSectionProjImg>
+          </a>
         </ProjectsSectionRow>
       ))}
     </ProjectsSectionMainContainer>

@@ -71,7 +71,12 @@ export const ProjectsSectionProjImg = styled.div`
   }
 
   span {
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
     border-radius: 33px;
     box-shadow: 7px 7px 35px 0px rgb(0 0 0 / 25%);
+    &:hover {
+      box-shadow: 8px 8px 25px 3px rgb(76 70 70 / 55%);
+    }
   }
 `;

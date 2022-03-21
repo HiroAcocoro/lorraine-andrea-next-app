@@ -5,7 +5,6 @@ import {
 } from "react-parallax-mouse";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import PurpleDonut1 from "../../public/purple-donut-1.png";
 import OrangeSpring1 from "../../public/orange-spring-1.png";
@@ -50,19 +49,21 @@ const HeroSectionComponent = () => {
             <HeroSectionName>Lorraine Andrea</HeroSectionName>
             <HeroSectionDescription>UI/UX Designer</HeroSectionDescription>
             <HeroLinkContainer scrollY={scrollY}>
-              <Link href="/">
-                <a>
-                  <HeroLinkImgContainer>
-                    <Image
-                      src={BsDownload}
-                      alt="download-icon"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </HeroLinkImgContainer>
-                  RESUME
-                </a>
-              </Link>
+              <a
+                href="https://drive.google.com/file/d/18_T1Rc0v3Dc6UfIVlyBHsamd8HbTQ2jY/view"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <HeroLinkImgContainer>
+                  <Image
+                    src={BsDownload}
+                    alt="download-icon"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </HeroLinkImgContainer>
+                RESUME
+              </a>
             </HeroLinkContainer>
           </HeroSectionContent>
         </MouseParallaxChild>

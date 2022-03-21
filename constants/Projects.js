@@ -11,6 +11,7 @@ const ProjHeight = "300px";
 export default [
   {
     id: "ebisu",
+    link: "https://drive.google.com/file/d/1-otjXGo7BKL33fU4DffVvnrbkVkBi-Va/view",
     orientation: {
       isReverse: false,
     },
@@ -32,6 +33,7 @@ export default [
   },
   {
     id: "chatapp",
+    link: "https://drive.google.com/file/d/1hMtCbpQJ12jqZOG9ZqEBaxC358UlAUDd/view?usp=sharing",
     orientation: {
       isReverse: true,
     },
@@ -54,6 +56,7 @@ export default [
   },
   {
     id: "mma",
+    link: "https://drive.google.com/file/d/157vx1hp44g_yWfkj4BDkFwHwbKYtiaCB/view?usp=sharing",
     orientation: {
       isReverse: false,
     },

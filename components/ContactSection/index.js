@@ -73,19 +73,25 @@ const ContactSectionComponent = () => {
         <ContactFooterImgs>
           <ContactImgs>
             {Contacts.map((contact) => (
-              <ContactSectionImgWrapper
-                width={contact.width}
-                height={contact.height}
-                lgMod="height: 100px; width: 100px;"
-                scale125Mod="width: 70px; height: 70px"
+              <a
+                href={contact.link}
+                target="_blank"
                 key={contact.id}
+                rel="noreferrer"
               >
-                <Image
-                  src={contact.src}
-                  alt={contact.alt}
-                  layout="responsive"
-                />
-              </ContactSectionImgWrapper>
+                <ContactSectionImgWrapper
+                  width={contact.width}
+                  height={contact.height}
+                  lgMod="height: 100px; width: 100px;"
+                  scale125Mod="width: 70px; height: 70px"
+                >
+                  <Image
+                    src={contact.src}
+                    alt={contact.alt}
+                    layout="responsive"
+                  />
+                </ContactSectionImgWrapper>
+              </a>
             ))}
           </ContactImgs>
         </ContactFooterImgs>
